@@ -44,7 +44,7 @@ const AddProjectModal = ({ isModalOpen, closeModal, edit = false, id = null }) =
                     }
                 })
         } else {
-            axios.put(`http://localhost:9000/project/${id}`, { title, description: desc })
+            axios.put(`https://to-do-backend-rli3.onrender.com/${id}`, { title, description: desc })
                 .then((res) => {
                     closeModal()
                     const customEvent = new CustomEvent('projectUpdate', { detail: { ...res.data } });
